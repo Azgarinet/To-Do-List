@@ -88,12 +88,21 @@ start.addEventListener('click', function () {
     input.value = "";
     new Note(inputInfo)
 })
+input.addEventListener('keydown', function (e) {
+    if (e.keyCode === 13) {
+        let inputInfo = inputValue()
+        input.value = "";
+        new Note(inputInfo)
+    }
+})
+
 
 
 class Note {
     constructor(text) {
         this.text = text;
         this.createElement();
+
     }
     createElement() {
         if (this.text === undefined) return
