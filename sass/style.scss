@@ -1,0 +1,180 @@
+@import "reset";
+@import "variabless";
+@import "mixins";
+
+html {
+    font-family: 'Concert One', cursive;
+}
+
+body {
+    background-color: $color-dark-blue;
+
+}
+
+.container-color {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    height: 50px;
+
+    &__btn {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid gray;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &--active {
+            border-color: white;
+        }
+    }
+
+    &__btn:nth-child(1) {
+        background: linear-gradient(180deg, #FEB41C, #363F45 60%);
+    }
+
+    &__btn:nth-child(2) {
+        background: linear-gradient(180deg, #F252BA, #5BCCD9 90%);
+    }
+
+    &__btn:nth-child(3) {
+        background: linear-gradient(180deg, #14F20C, #F24B59 80%);
+    }
+}
+
+.to-do-first {
+    @include toDoH1() color: $color-yellow;
+}
+
+.to-do-second {
+    @include toDoH1() color: $color-purple;
+}
+
+.to-do-third {
+    @include toDoH1() color: $color-dark-green;
+}
+
+.container {
+    display: flex;
+    width: 70vw;
+    margin: 0 auto;
+
+
+    &__input {
+        flex-grow: 1;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 35px;
+        font-family: 'Concert One', cursive;
+        color: $color-dark-blue;
+
+        &::placeholder {
+            font-size: 25px;
+            color: lighten($color-light-blue, 20%)
+        }
+
+        &:focus {
+            outline: none;
+            background-color: $color-note-yellow;
+        }
+    }
+
+    &__span-btn {
+        display: inline-block;
+        font-size: 35px;
+        margin-left: 10px;
+        cursor: pointer;
+
+        span {
+            line-height: 55px;
+            color: white;
+            transition: 0.2s;
+
+            &:hover {
+                color: rgb(64, 202, 37);
+            }
+        }
+
+
+    }
+}
+
+.notes {
+    margin: 20px;
+
+    &__container {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__element-first {
+        @include noteElement() background-color: $color-note-yellow;
+    }
+
+    &__element-second {
+        @include noteElement() background-color: $color-note-pink;
+    }
+
+    &__element-third {
+        @include noteElement() background-color: $color-note-red;
+    }
+
+    &__element--done {
+        background-color: lighten(#14F20C, 20%);
+    }
+
+    &__text {
+        flex-basis: 80%;
+        margin: 10px;
+        font-size: 30px;
+    }
+
+    &__panel-first {
+        @include Panel() background-color: darken($color-note-yellow, 15%);
+    }
+
+    &__panel-second {
+        @include Panel() background-color: darken($color-note-pink, 15%);
+    }
+
+    &__panel-third {
+        @include Panel() background-color: darken($color-note-red, 15%);
+    }
+
+    &__done,
+    &__delete,
+    &__edit {
+        text-align: center;
+        margin: 5px 0;
+
+    }
+
+    &__done>span {
+        color: #30FA67;
+
+        @include notePanel() &:hover {
+            color: darken(#30FA67, 15%);
+        }
+    }
+
+    &__delete>span {
+        color: #AE2022;
+
+        @include notePanel() &:hover {
+            color: darken(#AE2022, 15%);
+        }
+    }
+
+    &__edit>span {
+        color: #001EBA;
+
+        @include notePanel() &:hover {
+            color: darken(#001EBA, 15%);
+        }
+    }
+}
