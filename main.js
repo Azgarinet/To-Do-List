@@ -75,12 +75,18 @@ const input = document.querySelector('.container__input');
 let counter = 0;
 
 function inputValue() {
-    if (input.value === "") {
-        alert("Dodaj notatkę")
+    if (input.value.length > 500) {
+        alert("Max. characters limit 500")
+        return
     } else {
-        const value = input.value;
-        return value;
+        if (input.value === "") {
+            alert("Add some note!")
+        } else {
+            const value = input.value;
+            return value;
+        }
     }
+
 }
 
 start.addEventListener('click', function () {

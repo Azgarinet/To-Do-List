@@ -138,6 +138,17 @@ body {
         flex-basis: 80%;
         margin: 10px;
         font-size: 30px;
+        word-wrap: break-word;
+        overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.1)
     }
 
     &__panel-first {

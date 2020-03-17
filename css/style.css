@@ -163,7 +163,8 @@ body {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   margin: 10px;
-  min-height: 300px;
+  height: 300px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: lightyellow;
 }
@@ -176,7 +177,8 @@ body {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   margin: 10px;
-  min-height: 300px;
+  height: 300px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: #e08ec3;
 }
@@ -189,7 +191,8 @@ body {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   margin: 10px;
-  min-height: 300px;
+  height: 300px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: #e0858c;
 }
@@ -203,6 +206,17 @@ body {
       flex-basis: 80%;
   margin: 10px;
   font-size: 30px;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.notes ::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.notes ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .notes__panel-first {
