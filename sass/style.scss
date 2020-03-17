@@ -46,15 +46,18 @@ body {
 }
 
 .to-do-first {
-    @include toDoH1() color: $color-yellow;
+    @include toDoH1();
+    color: $color-yellow;
 }
 
 .to-do-second {
-    @include toDoH1() color: $color-purple;
+    @include toDoH1();
+    color: $color-purple;
 }
 
 .to-do-third {
-    @include toDoH1() color: $color-dark-green;
+    @include toDoH1();
+    color: $color-dark-green;
 }
 
 .container {
@@ -113,15 +116,18 @@ body {
     }
 
     &__element-first {
-        @include noteElement() background-color: $color-note-yellow;
+        @include noteElement();
+        background-color: $color-note-yellow;
     }
 
     &__element-second {
-        @include noteElement() background-color: $color-note-pink;
+        @include noteElement();
+        background-color: $color-note-pink;
     }
 
     &__element-third {
-        @include noteElement() background-color: $color-note-red;
+        @include noteElement();
+        background-color: $color-note-red;
     }
 
     &__element--done {
@@ -135,15 +141,18 @@ body {
     }
 
     &__panel-first {
-        @include Panel() background-color: darken($color-note-yellow, 15%);
+        @include Panel();
+        background-color: darken($color-note-yellow, 15%);
     }
 
     &__panel-second {
-        @include Panel() background-color: darken($color-note-pink, 15%);
+        @include Panel();
+        background-color: darken($color-note-pink, 15%);
     }
 
     &__panel-third {
-        @include Panel() background-color: darken($color-note-red, 15%);
+        @include Panel();
+        background-color: darken($color-note-red, 15%);
     }
 
     &__done,
@@ -157,7 +166,9 @@ body {
     &__done>span {
         color: #30FA67;
 
-        @include notePanel() &:hover {
+        @include notePanel();
+
+        &:hover {
             color: darken(#30FA67, 15%);
         }
     }
@@ -165,7 +176,9 @@ body {
     &__delete>span {
         color: #AE2022;
 
-        @include notePanel() &:hover {
+        @include notePanel();
+
+        &:hover {
             color: darken(#AE2022, 15%);
         }
     }
@@ -173,7 +186,9 @@ body {
     &__edit>span {
         color: #001EBA;
 
-        @include notePanel() &:hover {
+        @include notePanel();
+
+        &:hover {
             color: darken(#001EBA, 15%);
         }
     }
