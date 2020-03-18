@@ -30,6 +30,14 @@
     .notes__element-third {
         flex-basis: 70%;
     }
+
+    .container__input {
+        font-size: 25px;
+
+        &::placeholder {
+            font-size: 20px;
+        }
+    }
 }
 
 @media (max-width:1000px) and (orientation: portrait) {

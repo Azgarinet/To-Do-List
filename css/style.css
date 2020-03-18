@@ -326,6 +326,21 @@ body {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
   }
+  .container__input {
+    font-size: 25px;
+  }
+  .container__input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input::-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input::placeholder {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1000px) and (orientation: portrait) {
