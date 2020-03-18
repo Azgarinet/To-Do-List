@@ -295,4 +295,91 @@ body {
 .notes__edit > span:hover {
   color: #00126e;
 }
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .notes__element-first,
+  .notes__element-second,
+  .notes__element-third {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  .container-color {
+    width: 110px;
+    right: 5px;
+  }
+  .container-color__btn {
+    width: 30px;
+    height: 30px;
+  }
+  .container {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 550px) and (orientation: landscape) {
+  .notes__element-first,
+  .notes__element-second,
+  .notes__element-third {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .notes__element-first,
+  .notes__element-second,
+  .notes__element-third {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .container {
+    width: 80vw;
+  }
+  .notes__element-first,
+  .notes__element-second,
+  .notes__element-third {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
+@media (max-width: 500px) and (orientation: portrait) {
+  .container-color {
+    width: 110px;
+    right: 5px;
+  }
+  .container-color__btn {
+    width: 30px;
+    height: 30px;
+  }
+  .to-do-first,
+  .to-do-second,
+  .to-do-third {
+    font-size: 50px;
+  }
+  .container {
+    width: 90%;
+  }
+  .container__input {
+    font-size: 25px;
+  }
+  .container__input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input::-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .container__input::placeholder {
+    font-size: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
